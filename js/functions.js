@@ -1,5 +1,5 @@
 "use strict";
-(function () {
+
 
 
 
@@ -102,7 +102,7 @@ console.log("tipAmount", calculateTip(currentBill,tipPercentage).toFixed(2));
  * Example:
  * > var originalPrice = 100;
  * > var dicountPercent = .2; // 20%
- * > applyDiscount(originalPrice, dicountPercent) // 80
+ * > applyDiscount(originalPrice, discountPercent) // 80
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
@@ -114,4 +114,3 @@ function applyDiscount(x,y){
 var originalPrice = 25;
 var discountPercent = .1;
 console.log("Example discount price", applyDiscount(originalPrice,discountPercent).toFixed(2));
-})()
