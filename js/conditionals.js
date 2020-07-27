@@ -171,25 +171,25 @@ function calculateTotal(x,y) {
 var userDialog = confirm("Would you like to enter a number?");
 (function userDialogConfirm(){
     if(userDialog == true){
-        var userInput = prompt("What is your number?");
-        if(isNaN(parseFloat(userInput))){
+        var userInput = parseFloat(prompt("What is your number?"));
+        if(isNaN(userInput)){
              alert("This is not a number!");
         }else{
             function evenOdd(){
-                if(parseFloat(userInput) % 2 === 0){
-                    return  "Your number is even.";
+                if(userInput % 2 === 0){
+                    return  userInput + " is even.";
                 }else{
-                    return "Your number is odd.";
+                    return userInput + " is odd.";
                 }
             }
             function plus100(){
-               return "Your number plus 100 is " + (parseFloat(userInput) + 100) + ".";
+               return userInput + " plus 100 is " + (userInput + 100) + ".";
             }
             function posNeg(){
-                if(parseFloat(userInput) > 0){
-                   return "Your number is positive.";
-                }else if(parseFloat(userInput) < 0){
-                   return "Your number is negative."
+                if(userInput > 0){
+                   return userInput + " is positive.";
+                }else if(userInput < 0){
+                   return userInput + " is negative."
                 }else{
                     return "Your number is zero."
                 }
