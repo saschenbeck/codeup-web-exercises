@@ -36,10 +36,13 @@ function oddEven20To200() {
 
 //For Loops Exercise 4
 function cascade() {
+
     for (var i = 1; i < 10; i++){
+        var display = "";
         for(var j = 0; j < i; j++){
-            console.log(i);
+            display += i;
         }
+        console.log(display);
     }
 }
 
@@ -47,11 +50,14 @@ function cascade() {
 //For Loops Exercise 5
 var stoppingPoint = 0;
 function minusBy5(x) {
-    for(var i = 0; i < x; i++){
-        if((x - (i * 5) === stoppingPoint)){
-            break;
-        }else{
-            console.log(x - (i * 5));
-        }
+    // for(var i = 0; i < x; i++){
+    //     if((x - (i * 5) === stoppingPoint)){
+    //         break;
+    //     }else{
+    //         console.log(x - (i * 5));
+    //     }
+    // }
+    for(var i = x; i > 0; i -= 5){
+        console.log(i);
     }
 }
