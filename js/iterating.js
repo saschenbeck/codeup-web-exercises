@@ -7,11 +7,15 @@
      * 'names'.
      */
 
+    var names = ["Andrew", "Drew" , "Ann", "Phil"];
+
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
+
+    console.log("The number of elements in the names array is " + names.length);
 
     /**
      * TODO:
@@ -19,16 +23,30 @@
      * accessing each element's index.
      */
 
+    console.log("The person at the first index is " + names[0]);
+    console.log("The person at the second index is " + names[1]);
+    console.log("The person at the third index is " + names[2]);
+    console.log("The person at the fourth index is " + names[3]);
+
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
 
+    for(var i = 0; i < names.length; i++){
+        console.log("The name at index " + i + " is: " + names[i]);
+    }
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+    names.forEach(function(name,nameIndex){
+        console.log("The person at index " + nameIndex + " is " + name);
+
+    });
 
     /**
      * TODO:
@@ -43,5 +61,19 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-
 })();
+/*I attempted to input these functions within IIFE, however the functions would
+appear as not defined within the console*/
+var numberLine = [1, 2, 3, 4, 5];
+
+function first(x) {
+    console.log(x[0]);
+}
+
+function second(x) {
+    console.log(x[1]);
+}
+
+function last(x) {
+    console.log(x[x.length]);
+}
