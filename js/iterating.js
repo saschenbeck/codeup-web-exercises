@@ -61,6 +61,26 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+
+    const first = function (arr) {
+        return arr[0];
+    }
+
+    console.log(first(names));
+
+    const second = function (arr) {
+        return arr[1];
+    }
+
+    console.log(second(names));
+
+    const last = function (arr) {
+        return arr[arr.length - 1];
+    }
+
+    console.log(last(names));
+
+
 })();
 /*I attempted to input these functions within IIFE, however the functions would
 appear as not defined within the console*/
