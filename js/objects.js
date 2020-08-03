@@ -12,6 +12,14 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+    var person = {
+        firstName: "Skyler",
+        lastName: "Aschenbeck"
+    };
+
+    console.log(person.firstName);
+    console.log(person.lastName);
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,6 +29,12 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    person.sayHello = function () {
+        return "Hello from " + person.firstName + " " + person.lastName + "!";
+    }
+
+    console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +50,29 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    const discountAmount = function(amount){
+        var discountPercent = .12
+        return "$" + (amount - (amount * discountPercent)).toFixed(2);
+    };
+
+    shoppers.forEach(function (shopper) {
+        if( shopper.amount > 200){
+            console.log(shopper.name + " has qualified for the discount. They were going to pay $" + shopper.amount.toFixed(2) + ". Now they will pay " + discountAmount(shopper.amount));
+        }else{
+            console.log(shopper.name + " did not qualify for the discount. They will still pay $" + shopper.amount.toFixed(2));
+        }
+
+    })
+
+
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -54,6 +86,49 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {
+            title: "Ready Player One",
+            author: {
+                firstName: "Ernest",
+                lastName: "Cline",
+
+            }
+        },
+        {
+            title: "How to Win Friends and Influence People",
+            author: {
+                firstName: "Dale",
+                lastName: "Carnegie",
+
+            }
+        },
+        {
+            title: "Green Eggs and Ham",
+            author: {
+                firstName: "Theodor",
+                lastName: "Geisel",
+
+            }
+        },
+        {
+            title: "The Lightning Thief",
+            author: {
+                firstName: "Rick",
+                lastName: "Riordan",
+
+            }
+        },
+        {
+            title: "Original Sin",
+            author: {
+                firstName: "Jason",
+                lastName: "Aaron",
+
+            }
+        }
+    ]
 
     /**
      * TODO:
@@ -79,6 +154,13 @@
      *      ---
      *      ...
      */
+
+    books.forEach(function (book) {
+        console.log("Book #" + (books.indexOf(book) + 1));
+        console.log("Title: " + book.title)
+        console.log(("Author: " + book.author.firstName + " " + book.author.lastName))
+        console.log("---")
+    })
 
     /**
      * Bonus:
