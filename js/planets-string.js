@@ -27,6 +27,6 @@
     var planetBreak = planetsArray.join('\n');
     console.log(planetBreak);
 
-
-
+    var planetList = "<ul><li>Mercury</li><li>Venus</li><li>Earth</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li></ul>";
+    console.log(planetList);
 })();
