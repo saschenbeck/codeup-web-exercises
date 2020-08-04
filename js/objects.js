@@ -63,9 +63,9 @@
 
     shoppers.forEach(function (shopper) {
         if( shopper.amount > 200){
-            console.log(shopper.name + " has qualified for the discount. They were going to pay $" + shopper.amount.toFixed(2) + ". Now they will pay " + discountAmount(shopper.amount));
+            console.log(shopper.name + " has qualified for the 12% discount. They were going to pay $" + shopper.amount.toFixed(2) + ". Now they will pay " + discountAmount(shopper.amount));
         }else{
-            console.log(shopper.name + " did not qualify for the discount. They will still pay $" + shopper.amount.toFixed(2));
+            console.log(shopper.name + " did not qualify for the 12% discount. They will still pay $" + shopper.amount.toFixed(2));
         }
 
     })
