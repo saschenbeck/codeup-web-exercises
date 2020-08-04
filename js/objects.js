@@ -173,16 +173,28 @@
      *   `showBookInfo` function.
      */
 
-    function createBook(title, firstName, lastName){
+    function createBook(title, firstName, lastName, booksArray){
         var bookEntry = {
             title: title,
             author: {
                 firstName: firstName,
-                lastName: lastName,
+                lastName: lastName
             }
         }
 
+        booksArray.push(bookEntry);
+        return booksArray;
+
     }
+
+    createBook("The Cat in the Hat", "Theodor", "Geisel", books);
+
+    books.forEach(function (book) {
+        console.log("Book #" + (books.indexOf(book) + 1));
+        console.log("Title: " + book.title)
+        console.log(("Author: " + book.author.firstName + " " + book.author.lastName))
+        console.log("---")
+    });
 
     function showBookInfo(book){
 
