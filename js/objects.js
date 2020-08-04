@@ -173,4 +173,18 @@
      *   `showBookInfo` function.
      */
 
+    function createBook(title, firstName, lastName){
+        var bookEntry = {
+            title: title,
+            author: {
+                firstName: firstName,
+                lastName: lastName,
+            }
+        }
+
+    }
+
+    function showBookInfo(book){
+
+    }
 })();
