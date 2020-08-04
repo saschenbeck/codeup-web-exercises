@@ -155,12 +155,12 @@
      *      ...
      */
 
-    books.forEach(function (book) {
-        console.log("Book #" + (books.indexOf(book) + 1));
-        console.log("Title: " + book.title)
-        console.log(("Author: " + book.author.firstName + " " + book.author.lastName))
-        console.log("---")
-    })
+    // books.forEach(function (book) {
+    //     console.log("Book #" + (books.indexOf(book) + 1));
+    //     console.log("Title: " + book.title)
+    //     console.log(("Author: " + book.author.firstName + " " + book.author.lastName))
+    //     console.log("---")
+    // })
 
     /**
      * Bonus:
