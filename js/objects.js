@@ -87,48 +87,6 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    var books = [
-        {
-            title: "Ready Player One",
-            author: {
-                firstName: "Ernest",
-                lastName: "Cline",
-
-            }
-        },
-        {
-            title: "How to Win Friends and Influence People",
-            author: {
-                firstName: "Dale",
-                lastName: "Carnegie",
-
-            }
-        },
-        {
-            title: "Green Eggs and Ham",
-            author: {
-                firstName: "Theodor",
-                lastName: "Geisel",
-
-            }
-        },
-        {
-            title: "The Lightning Thief",
-            author: {
-                firstName: "Rick",
-                lastName: "Riordan",
-
-            }
-        },
-        {
-            title: "Original Sin",
-            author: {
-                firstName: "Jason",
-                lastName: "Aaron",
-
-            }
-        }
-    ]
 
     /**
      * TODO:
@@ -173,6 +131,8 @@
      *   `showBookInfo` function.
      */
 
+    var books = [];
+
     function createBook(title, firstName, lastName, booksArray){
         var bookEntry = {
             title: title,
@@ -186,7 +146,11 @@
         return booksArray;
 
     }
-
+    createBook("Ready Player One", "Ernest", "Cline", books);
+    createBook("How to Win Friends and Influence People", "Dale", "Carnegie",books);
+    createBook("Green Eggs and Ham", "Theodor", "Geisel", books);
+    createBook("The Lighting Thief", "Rick", "Riordan", books);
+    createBook("Original Sin", "Jason", "Aaron", books);
     createBook("The Cat in the Hat", "Theodor", "Geisel", books);
 
     books.forEach(function (book) {
