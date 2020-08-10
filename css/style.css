@@ -1,4 +1,16 @@
 .fancy-header {
     color: purple;
     text-decoration: underline;
+    text-align: center;
+}
+
+body {
+    background: aliceblue;
+}
+
+body {
+    background-image: url("../image/viridian-badge.png");
+    background-size: 50px;
+    background-repeat: repeat-y;
+    background-position: right;
 }
