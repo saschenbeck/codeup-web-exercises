@@ -62,7 +62,7 @@ fieldset {
     padding: 8px;
     color: white;
     font-weight: bold;
-    border: 1px lightgrey;
+    border: 1px lightgrey solid;
 }
 
 .form-control {
