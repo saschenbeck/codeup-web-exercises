@@ -13,6 +13,8 @@ body, html {
 form {
     /* This form should be separated from other elements by 1em */
     /* There must be 1em between the content and the border of this element */
+    padding: 1em;;
+    margin: 1em;
 }
 
 fieldset {
@@ -22,24 +24,34 @@ fieldset {
     /* There must be 1em between the content and the border of this element */
     /* It should have no border */
     /* Its background should be white */
+    background-color: white;
+    padding: 1em;
+    border: 0em;
 }
 
 .width-80 {
     /* The element with this class should 80% of the width and it must be centered */
     /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
+    width: 80%;
+    margin: auto;
 }
 
 .form-group {
     /* This element must use 100% of the width */
     /* It should have a separation of .5em from elements on top of it and below it*/
+    width: 100%;
+    padding: .5em 0em;
 }
 
 .form-label {
     /* The text of a label must be bold */
+    font-weight: bold;
+
 }
 
 .btn-block {
     /* This element should use 100% of the width */
+    width: 100%;
 }
 
 .btn {
@@ -47,6 +59,10 @@ fieldset {
     /* The text color of this element should be white and bold */
     /* The border of this element should be 1px, and its color should be light grey */
     background-color: #0fb784;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    border: 1px lightgrey;
 }
 
 .form-control {
@@ -58,6 +74,8 @@ fieldset {
     /* HINT: Calculate based on the padding of the `.btn` class */
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
     width: 100%;
+    margin: 4px 0em;
+    padding: .5em 0em;
 }
 
 
