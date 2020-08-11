@@ -14,28 +14,28 @@ body, html {
 }
 
 .message-info{
-    background-color: cornflowerblue;
-    color: blue;
+    background-color: #bac9e7;
+    color: #474395;
 
 }
 
 .message-success{
-    background-color: darkseagreen;
-    color: darkgreen;
+    background-color: #c6ead2;
+    color: #337848;
     padding: 1em;
     margin: 1em;
 }
 
 .message-warning{
-    background-color: lightyellow;
-    color: burlywood;
+    background-color: #f2f1c2;
+    color: #998a31;
     padding: 1em;
     margin: 1em;
 }
 
 .message-error{
-    background-color: lightcoral;
-    color: darkred;
+    background-color: #f0cbce;
+    color: #86283c;
     padding: 1em;
     margin: 1em;
 }
