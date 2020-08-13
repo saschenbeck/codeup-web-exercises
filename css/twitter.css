@@ -97,8 +97,10 @@ a {
 }
 .profile-items{
     padding: 0em;
-    margin: .5em;
     list-style-type: none;
+}
+.profile-entry{
+    margin: .5em;
 }
 .btn {
     border: 1px solid var(--main-link-color);
