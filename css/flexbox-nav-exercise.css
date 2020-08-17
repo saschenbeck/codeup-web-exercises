@@ -8,32 +8,32 @@ body{
     display: flex;
     background-color: lightgrey;
     align-items: center;
-    font-family:"Monsterrat", sans-serif;
+    font-family:"Work Sans", sans-serif;
     font-weight: bold;
     justify-content: space-between;
-}
-#topNav #logo{
-    font-size: 3em;
-    padding: .2em 0em;
 }
 #topNav ul {
     padding: 0em;
     margin: 0em;
-    font-family: "Work Sans", sans-serif;
     list-style: none;
     display: flex;
+    justify-content: center;
 }
 #topNav li {
-    padding: 1em;
-    margin: 0em;
+    padding: .5em;
+    margin: 0em 1em;
+
 }
-#rightNav a{
-    padding: 1em;
+.navLogo{
+    font-size: 3em;
+    padding: .2em;
+    font-family: "Monsterrat", sans-serif;
 }
 #topNav a {
     color: black;
     text-decoration: none;
     display: inline-block;
+    padding: 1em;
 }
 #topNav a:hover {
     color: blue;
