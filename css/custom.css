@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
 .active {
     background-color: lightgrey;
 }
@@ -5,10 +11,30 @@ hr {
     margin-bottom: 0;
     background-color: gray;
 }
-a {
+.navbar a {
     color: black;
 }
-.container {
+.container{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 2em;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.jumbotron {
+    width: 100%;
+    background-image: url("../image/jumbotron-pizza.png");
     display: flex;
-    flex-flow: row wrap;
+    justify-content: center;
+}
+.jumbotron>h1 {
+    background: rgba(41, 234, 239, 0.2);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.badge-secondary {
+    border-radius: 75px;
 }
