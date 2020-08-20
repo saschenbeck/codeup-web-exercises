@@ -1,0 +1,14 @@
+.active {
+    background-color: lightgrey;
+}
+hr {
+    margin-bottom: 0;
+    background-color: gray;
+}
+a {
+    color: black;
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
