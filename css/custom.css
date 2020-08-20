@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 body {
     margin: 0;
@@ -24,17 +25,36 @@ hr {
 }
 
 .jumbotron {
-    width: 100%;
+    width: 100vw;
+    margin: auto 0;
     background-image: url("../image/jumbotron-pizza.png");
     display: flex;
     justify-content: center;
 }
 .jumbotron>h1 {
-    background: rgba(41, 234, 239, 0.2);
-    width: 100%;
+    color: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.8);
+    width: 100vw;
     display: flex;
     justify-content: center;
+    margin-left: -30px;
 }
 .badge-secondary {
     border-radius: 75px;
+}
+.card>.card-body{
+    background-color: #3B94D9;
+}
+p {
+    background-color: white;
+}
+.card-title {
+    color: white;
+}
+.card>.card {
+    background-color: white;
+    color: black;
+}
+.card>.card>.card-title{
+    color: black;
 }
