@@ -45,11 +45,16 @@
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
-        listItems[1].style.color = "grey";
-        listItems[3].style.color = "grey";
-        listItems[0].style.color = "blue";
-        //Alternatively, you can assign a class of odd and even to the li elements, use even to get the el you need grey
-        //and use odd[0] to get the blue
+        // listItems[1].style.color = "grey";
+        // listItems[3].style.color = "grey";
+        // listItems[0].style.color = "blue";
+        for (var i = 0; i < listItems.length; i++){
+              if(listItems[i].getAttribute("data-dbid") == 1){
+                     listItems[i].style.color = "blue";
+                 } else {
+                 listItems[i].style.color = "grey";
+                 }
+             }
 
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
