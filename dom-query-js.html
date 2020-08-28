@@ -51,7 +51,7 @@
         for (var i = 0; i < listItems.length; i++){
               if(listItems[i].getAttribute("data-dbid") == 1){
                      listItems[i].style.color = "blue";
-                 } else {
+                 } else if(listItems[i].getAttribute("data-dbid") % 2 == 0) {   /*This if statement will turn the even dbid's grey*/
                  listItems[i].style.color = "grey";
                  }
              }
