@@ -1,25 +1,43 @@
 "use strict";
 mapboxgl.accessToken = mapboxToken;
-
-geocode("701 Commerce St, Dallas, TX, 75202", mapboxToken).then(function(result) {
-    console.log(result);
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-        center: result, // starting position [lng, lat]
-        zoom: 16 // starting zoom
-    });
-    var markerOptions = {
-        color: 'red',
-    }
-    var codeupMarker = new mapboxgl.Marker(markerOptions)
-        .setLngLat(result)
-        .addTo(map);
-    var codeupPopopup = new mapboxgl.Popup()
-        .setLngLat(result)
-        .setHTML("<h4>Codeup Rocks!</h4>")
-        .addTo(map);
-    codeupMarker.setPopup(codeupPopopup);
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [-96.8057, 32.7787], // starting position [lng, lat]
+    zoom: 8 // starting zoom
 });
+function placeMarkerAndPopup(info, token, map) {
+    geocode(info.address, token).then(function(coordinates) {
+        var popup = new mapboxgl.Popup().setHTML(info.popupHTML);
+        var marker = new mapboxgl.Marker()
+            .setLngLat(coordinates)
+            .addTo(map)
+            .setPopup(popup);
+            // popup.addTo(map);
+    });
+}
 
-geocode("")
+//This section houses our restaurants
+var restaurants = [];
+function createRestaurant(address, popup, restaurantArray){
+    var restaurantEntry = {
+        address: address,
+        popupHTML: popup
+    }
+    restaurantArray.push(restaurantEntry);
+    return restaurantArray
+}
+createRestaurant("4145 Belt Line Rd, Addison, TX","<h4>Sigree Grill Bar and Restaurant</h4>",restaurants)
+createRestaurant("2255 W Northwest Hwy, Dallas, TX 75220-4304","<h4>Raising Cane's Chicken Fingers</h4>",restaurants)
+createRestaurant("221 W Parker Rd Ste 257, Plano, TX 75023-6914","<h4>Bavarian Grill</h4>",restaurants)
+
+//This function allows the placeMarkerAndPopup function to be applied to all restaurants in the array
+function  newMarkers() {
+    for (var i = 0; i < restaurants.length; i++){
+        placeMarkerAndPopup(restaurants[i],mapboxgl.accessToken,map)
+    }
+}
+
+//This should be the last line to call to display all markers
+newMarkers();
+
