@@ -102,6 +102,17 @@ geocode("701 Commerce St, Dallas, TX, 75202", mapboxToken)
         //TODO: Using the geocode method above, add a marker at Codeup to the map
         //TODO: Instead of setCenter try using map.jumpTo()
         //TODO: Instead of setCenter try using map.flyTo()
+        var markerOptions = {
+            color: 'red',
+        }
+        var codeupMarker = new mapboxgl.Marker(markerOptions)
+            .setLngLat(result)
+            .addTo(map);
+        var codeupPopopup = new mapboxgl.Popup()
+            .setLngLat(result)
+            .setHTML("<h4>Codeup Rocks!</h4>")
+            .addTo(map);
+        codeupMarker.setPopup(codeupPopopup);
 })
 
 
