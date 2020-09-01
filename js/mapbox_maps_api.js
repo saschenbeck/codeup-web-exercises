@@ -47,3 +47,10 @@ restaurants.forEach(function (restaurant) {
 //This should be the last line to call to display all markers (This line references the for loop)
 // newMarkers();
 
+var zoomSelect = document.querySelector('#zoom-select');
+
+zoomSelect.addEventListener('change', function () {
+    var zoomValue = zoomSelect.options[zoomSelect.selectedIndex].value;
+
+    map.setZoom(zoomValue);
+})
