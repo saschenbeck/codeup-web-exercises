@@ -6,12 +6,35 @@
 <!--    <script src="js/jquery-3.5.1.min.js"></script>-->
 </head>
 <body>
+    <h1 class="" id="codeup">Welcome, Digidestined!</h1>
+     <p class="codeup" id="preface">Below are the crests that are given to a selected few Digidestined!</p>
+    <ul class="list" id="crestList">
+        <li class="crest" id="courage">Courage</li>
+        <li class="crest" id="friendship">Friendship</li>
+        <li class="crest" id="love">Love</li>
+        <li class="crest" id="knowledge">Knowledge</li>
+        <li class="crest" id="sincerity">Sincerity</li>
+        <li class="crest" id="reliability">Reliability</li>
+        <li class="crest" id="hope">Hope</li>
+        <li class="crest" id="light">Light</li>
+        <li class="crest" id="kindness">Kindness</li>
+    </ul>
+    <div class="codeup" id="selection">Which of the crests do you represent?</div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
-    $(document).ready(function(){
-        alert("The DOM had finished loading!");
-    });
+    // var welcome = $("#welcomeDigi").html();
+    // var intro = $("#preface").html();
+    // $(document).ready(function(){
+    //     alert(intro);
+    // });
+    // $(".codeup").css('border', '1px red solid');
+    $("li").css("font-size", "20px");
+    $(document).ready(function () {
+        alert($("h1").html())
+    })
+    $("h1, p, li").css("background-color", "yellow");
+
 </script>
 </body>
 </html>
