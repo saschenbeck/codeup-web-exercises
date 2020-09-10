@@ -2,9 +2,19 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <link rel="stylesheet" href="css/konami.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
 </head>
 <body>
-    <h1>Konami Code</h1>
+
+    <div class="preloader"></div>
+
+    <div class="row d-none" id="konamiContainer">
+        <h1 class="col-sm-12" id="konamiHeader">Konami Code</h1>
+    </div>
+
+
 
 
 
@@ -18,14 +28,21 @@
             console.log(event.keyCode);
         });
 
+        function loadUp() {
+            $(".preloader").addClass("complete");
+            $(".entry").addClass("d-none").removeClass("entry");
+            $("#konamiHeader").addClass("header")
+
+                $("#konamiContainer").removeClass("d-none");
+        }
+
         var konamiCode = [38,38,40,40,37,39,37,39,66,65,13], n = 0;
         var konamiExecuted = false;
         $(document).keydown(function (e) {
             if (e.keyCode === konamiCode[n++]) {
                 if (n === konamiCode.length) {
-                    console.log("Konami !!!");
                     konamiExecuted = true;
-                    alert("Success");
+                    loadUp();
                     n = 0;
                     return false;
                 }
@@ -33,6 +50,7 @@
                 n = 0;
             }
         });
+
 
     </script>
 
