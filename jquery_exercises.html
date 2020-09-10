@@ -33,6 +33,7 @@
     //     alert($("h1").html())
     // })
     // $("h1, p, li").css("background-color", "yellow");
+    $(document).ready(function () {
         $("h1").click(function () {
             $(this).css("background-color", "red");
         });
@@ -42,12 +43,12 @@
         });
 
         $("li").hover(function () {
-            $(this).css("color", "red");
-        },
-        function () {
-            $(this).css("color", "black");
-        });
-
+                $(this).css("color", "red");
+            },
+            function () {
+                $(this).css("color", "black");
+            });
+    })
 </script>
 </body>
 </html>
