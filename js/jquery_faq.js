@@ -4,7 +4,8 @@ $(window).ready(function () {
     $("dd").addClass("invisible");
 });
 
-$("dt").click(function () {
+$("#toggleLink").click(function (event) {
+    event.preventDefault();
     $("dd").toggleClass("invisible")
 });
 
