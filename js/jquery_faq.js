@@ -9,6 +9,18 @@ $("#toggleLink").click(function (event) {
     $("dd").toggleClass("invisible")
 });
 
-var webpage = document.documentElement.innerHTML
-var webpageDT = webpage.match(/<dt>/g);
-var webpageDD = webpage.match(/<dd/g);
+$("#lastFact").click(function () {
+    $("ul").each(function () {
+        $(this).children().last().toggleClass("highlight")
+    });
+});
+
+var nationalPNames = $("h3");
+nationalPNames.click(function () {
+    $(this).next("ul").toggleClass("bold");
+});
+
+var funFact = $("li");
+funFact.click(function () {
+    $(this).parent().children().first().toggleClass("blueFont")
+})
