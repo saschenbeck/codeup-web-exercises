@@ -18,6 +18,35 @@
         .blueFont {
             color: blue;
         }
+
+        #pictures {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .pictureContainer {
+            width: 25%;
+            height: 15em;
+            border: 5px solid saddlebrown;
+        }
+
+        #yellowstoneIMG {
+            background-image: url("image/yellowstone.jpeg");
+        }
+
+        #yosemiteIMG {
+            background-image: url("image/yosemite.jpeg");
+        }
+
+        #bigBendIMG {
+            background-image: url("image/bigBend.jpeg");
+        }
+
+        #swapButtons {
+            display: flex;
+            justify-content: space-around;
+        }
+
     </style>
 </head>
 <body>
@@ -100,6 +129,19 @@
     <li>The highest elevation found in Big Bend is 7,832 feet on Emory Peak.</li>
     <li>The name Big Bend comes from a large bend in the Rio Grande River along the park boundary.</li>
 </ul>
+
+<div id="pictures">
+    <div id="yellowstoneIMG" class="pictureContainer"></div>
+    <div id="yosemiteIMG" class="pictureContainer"></div>
+    <div id="bigBendIMG" class="pictureContainer"></div>
+</div>
+<div id="swapButtons">
+    <button id="leftSwap">SWAP</button>
+    <button id="midSwap">SWAP</button>
+    <button id="rightSwap">SWAP</button>
+</div>
+
+
 
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <script src="js/jquery_faq.js"></script>
