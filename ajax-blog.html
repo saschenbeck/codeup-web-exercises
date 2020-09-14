@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .blog-main{
+            padding: 1em;
+        }
+        .blog-main:hover {
+            background-color: slategrey;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="posts" class="container"></div>
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    $.get("data/blog.json").done(function (data) {
+
+        data.forEach(function (item) {
+            $("#posts").append(
+                "<div class='row'>" +
+                "<div class='col-12 blog-main'>" +
+                "<h3 class='blog-post-title'>" + item.title + "</h3>" +
+                "<p class='blog-post-meta'>" + item.date+ "</p>" +
+                "<p>" + item.content + "</p>" +
+                "<div class='categories'><span class='badge badge-primary'>"+ item.categories.join("</span>" + " " + "<span class='badge badge-primary'>") +"</span></div>" +
+                "<hr>" +
+                "</div>" +
+                "</div>"
+            );
+        });
+    });
+</script>
+</body>
+</html>
