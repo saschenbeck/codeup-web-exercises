@@ -33,9 +33,7 @@ $("#lastFact").click(function () {
 var nationalPNames = $("h3");
 
 nationalPNames.click(function () {
-    $(this).each(function (index,element) {
-        $(element).next().slideToggle();
-    })
+    $(this).next().slideToggle();
 });
 
 var funFact = $("li");
