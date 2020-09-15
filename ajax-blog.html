@@ -12,6 +12,14 @@
             background-color: slategrey;
             color: white;
         }
+
+        .badge:hover {
+            color: aqua;
+            cursor: pointer;
+        }
+        .badge:active {
+            color: lime;
+        }
     </style>
 </head>
 <body>
@@ -23,20 +31,21 @@
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
-    $.get("data/blog.json").done(function (data) {
-
-        data.forEach(function (item) {
-            $("#posts").append(
-                "<div class='row'>" +
-                "<div class='col-12 blog-main'>" +
-                "<h3 class='blog-post-title'>" + item.title + "</h3>" +
-                "<p class='blog-post-meta'>" + item.date+ "</p>" +
-                "<p>" + item.content + "</p>" +
-                "<div class='categories'><span class='badge badge-primary'>"+ item.categories.join("</span>" + " " + "<span class='badge badge-primary'>") +"</span></div>" +
-                "<hr>" +
-                "</div>" +
-                "</div>"
-            );
+    $(document).ready(function () {
+        $.get("data/blog.json").done(function (data) {
+            data.forEach(function (item) {
+                $("#posts").append(
+                    "<div class='row'>" +
+                    "<div class='col-12 blog-main'>" +
+                    "<h3 class='blog-post-title'>" + item.title + "</h3>" +
+                    "<p class='blog-post-meta'>" + item.date + "</p>" +
+                    "<p>" + item.content + "</p>" +
+                    "<div class='categories'><span class='badge badge-info'>" + item.categories.join("</span>" + " " + "<span class='badge badge-info'>") + "</span></div>" +
+                    "<hr>" +
+                    "</div>" +
+                    "</div>"
+                );
+            });
         });
     });
 </script>
