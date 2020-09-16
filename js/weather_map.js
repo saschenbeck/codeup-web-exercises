@@ -17,7 +17,6 @@
             lat: lat,
             units: "imperial"
         }).done(function (data) {
-            console.log(data);
             var fiveDayForecast = [];
             for (var i = 0; i < data.list.length; i += 8) {
                 fiveDayForecast.push(data.list[i]);
@@ -33,16 +32,16 @@
 
             var days = $("#forecast>.day");
 
-            var fadeAllIn = function test(index) {
+            var slideAllIn = function test(index) {
                 $("#template").css("display", "none");
                 $(days[index]).slideDown(400, function() {
                     if (index + 1 < days.length) {
-                        fadeAllIn(index + 1);
+                        slideAllIn(index + 1);
                     }
                 });
             }
 
-            fadeAllIn(0);
+            slideAllIn(0);
 
         });
     }
@@ -61,7 +60,7 @@
         $(card).addClass("day card col-sm-2")
             .html($("#template").html());
 
-        $(card).find(".temperature").text(minTemp + " °F / " + maxTemp + " °F");
+        $(card).find(".temperature").text("Low " + minTemp + " °F - High " + maxTemp + " °F");
         $(card).find(".date").text(date);
         $(card).find(".icon").html(
             "<img src='http://openweathermap.org/img/w/" + icon + ".png'>"
