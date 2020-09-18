@@ -50,6 +50,10 @@ hr {
     border: 1px dotted black;
     border-radius: 3px;
 }
+.card-body:hover{
+    background: deepskyblue;
+    color: white;
+}
 
 .day {
     width: 100%;
